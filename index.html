@@ -97,5 +97,22 @@ I am making a page!
     </tbody>
 </table>   
 </body>
+<hr>
+<h2>The Code Snippet</h2>
+<pre><code id="codeBlock"></code></pre>
+
+<p>Source: <a href="https://pieces.app/collections/javascript" target="_blank">Pieces JavaScript Snippets Collection</a></p>
+<p>This code converts  array elements into list tags li and appends them to the list of the given id</p>
+
+<script>
+const codeString = `const arrayToHTMLList = (arr, listID) =>
+  document.querySelector(\`#\${listID}\`).innerHTML += arr
+    .map(item => \`
+<li>\${item}</li>
+\`)
+    .join('');`;
+
+document.getElementById('codeBlock').textContent = codeString;
+</script>
 </html>
 
